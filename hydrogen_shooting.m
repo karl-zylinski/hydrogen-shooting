@@ -4,13 +4,18 @@ close all;
 r_start = 0.00000001;
 r_end = 30;
 au_eV_conv = 27.211385;
+
+% Find energy for l = 0, 1, 2
 energy_l0 = find_hydroggen_energy(0, r_start, r_end);
 energy_l1 = find_hydroggen_energy(1, r_start, r_end);
 energy_l2 = find_hydroggen_energy(2, r_start, r_end);
+
 disp(['Found energy for l=0: ' num2str(energy_l0 * au_eV_conv, 3) ' eV']);
 disp(['Found energy for l=1: ' num2str(energy_l1 * au_eV_conv, 3) ' eV']);
 disp(['Found energy for l=2: ' num2str(energy_l2 * au_eV_conv, 3) ' eV']);
 
+% These energies are used to display how the energy diverges in different
+% directions around the found energy.
 energies_l0 = linspace(energy_l0-abs(energy_l0)/10, energy_l0+abs(energy_l0)/10, 7);
 figure(1);
 for i = 1:length(energies_l0)
