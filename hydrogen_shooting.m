@@ -26,7 +26,7 @@ for i = 1:length(energies_l0)
 end
 xlabel('Atomic radial postition');
 ylabel('Radial wave function');
-title('Radial wavefunction for l = 0'); 
+title('Radial wave function for l = 0'); 
 legend(cellstr(num2str(energies_l0' * au_eV_conv, 'E=%.4f eV')), 'location', 'southwest');
 axis([0 23 -20 20]);
 
@@ -40,7 +40,7 @@ for i = 1:length(energies_l1)
 end
 xlabel('Atomic radial postition');
 ylabel('Radial wave function');
-title('Radial wavefunction for l = 1'); 
+title('Radial wave function for l = 1'); 
 legend(cellstr(num2str(energies_l1' * au_eV_conv, 'E=%.4f eV')), 'location', 'southwest');
 axis([0 23 -30000 30000]);
 
@@ -54,6 +54,6 @@ for i = 1:length(energies_l2)
 end
 xlabel('Atomic radial postition');
 ylabel('Radial wave function');
-title('Radial wavefunction for l = 2'); 
+title('Radial wave function for l = 2'); 
 legend(cellstr(num2str(energies_l2' * au_eV_conv, 'E=%.4f eV')), 'location', 'southwest');
 axis([0 30 -1.5*10^13 1.5*10^13]);
