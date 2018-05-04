@@ -27,7 +27,7 @@ end
 xlabel('Atomic radial postition');
 ylabel('Wave function');
 title('Non-nomalised wavefunction for l = 0'); 
-legend(cellstr(num2str(energies_l0', 'E=%.5f')), 'location', 'southwest');
+legend(cellstr(num2str(energies_l0' * au_eV_conv, 'E=%.4f eV')), 'location', 'southwest');
 axis([0 23 -20 20]);
 
 energies_l1 = linspace(energy_l1-abs(energy_l1)/10, energy_l1+abs(energy_l1)/10, 7);
@@ -41,7 +41,7 @@ end
 xlabel('Atomic radial postition');
 ylabel('Wave function');
 title('Non-nomalised wavefunction for l = 1'); 
-legend(cellstr(num2str(energies_l1', 'E=%.5f')), 'location', 'southwest');
+legend(cellstr(num2str(energies_l1' * au_eV_conv, 'E=%.4f eV')), 'location', 'southwest');
 axis([0 23 -30000 30000]);
 
 energies_l2 = linspace(energy_l2-abs(energy_l2)/10, energy_l2+abs(energy_l2)/10, 7);
@@ -55,5 +55,5 @@ end
 xlabel('Atomic radial postition');
 ylabel('Wave function');
 title('Non-nomalised wavefunction for l = 2'); 
-legend(cellstr(num2str(energies_l2', 'E=%.5f')), 'location', 'southwest');
+legend(cellstr(num2str(energies_l2' * au_eV_conv, 'E=%.4f eV')), 'location', 'southwest');
 axis([0 30 -1.5*10^13 1.5*10^13]);
